@@ -2,6 +2,7 @@
 @import './_colors.scss';
 
 .joke-card {
+  position: relative;
   min-width: 172px;
   height: 240px;
   background-color: $green;
@@ -23,10 +24,44 @@
   box-shadow: 8px 8px 2px #888888;
   padding: 16px;
   text-align: center;
+  .card-reverse-liked {
+    display: none;
+  }
   .card-content {
     display: inline-block;
   }
 }
+
+.card-reverse-liked {
+  .hidden-smile- {
+    display: none;
+  }
+  .hidden-smile-show {
+    display: inline-block;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+  }
+  .hidden-frown- {
+    display: none;
+  }
+  .hidden-frown-show {
+    display: inline-block;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+  }
+}
+
+
 
 .card-content {
   max-width: 400px;
@@ -43,7 +78,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
-  height: 50%;
   margin-bottom: 16px;
 }
 
