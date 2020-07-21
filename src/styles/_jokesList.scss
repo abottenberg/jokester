@@ -1,0 +1,61 @@
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .jokes-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  .jokes-container {
+    margin: auto 16px 16px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .jokes-list {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 16px;
+  }
+  .jokes-container {
+    margin: auto 24px 24px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .jokes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+  .jokes-container {
+    margin: auto 40px 40px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .jokes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+  .jokes-container {
+    margin: auto 80px 80px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .jokes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+  .jokes-container {
+    margin: auto 100px 100px;
+  }
+}
+

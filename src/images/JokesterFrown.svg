@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="176px" viewBox="0 0 384 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <circle id="Oval" fill="#3245B8" cx="32" cy="32" r="32"></circle>
+            <circle id="Oval-Copy" fill="#3245B8" cx="352" cy="32" r="32"></circle>
+            <path d="M128,96 C130.666667,140.666667 151.666667,163 191,163 C230.333333,163 252.333333,140.666667 257,96" id="Path" stroke="#3245B8" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" transform="translate(192.500000, 129.500000) rotate(180.000000) translate(-192.500000, -129.500000) "></path>
+        </g>
+    </g>
+</svg>

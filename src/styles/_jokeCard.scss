@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import './_colors.scss';
+
+.joke-card {
+  min-width: 172px;
+  height: 240px;
+  background-color: $green;
+  border: solid black 1px;
+  border-radius: 16px;
+  box-shadow: 4px 4px #888888;
+  padding: 16px;
+  .card-content {
+    display: none;
+  }
+}
+
+.active {
+  min-width: 172px;
+  height: 240px;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 16px;
+  box-shadow: 8px 8px 2px #888888;
+  padding: 16px;
+  text-align: center;
+  .card-content {
+    display: inline-block;
+  }
+}
+
+.card-content {
+  max-width: 400px;
+  height: 100%;
+  padding: 8px;
+  margin: auto;
+}
+
+.card-text {
+  height: 80%;
+}
+
+.joke-setup {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 50%;
+  margin-bottom: 16px;
+}
+
+.joke-punchline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.like-buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+}
