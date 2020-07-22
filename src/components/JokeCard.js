@@ -6,35 +6,34 @@ import '../styles/_jokeCard.scss';
 
 const JokeCard = ({ joke, activeJoke, setActiveJoke }) => {
   const [likeJoke, setLikeJoke] = useState(null);
-  const [activeButton, setActiveButton] = useState(false);
 
   const onLike = (event) => {
     setLikeJoke(event.currentTarget.value);
-    setActiveButton(true);
   };
 
-  const onCardClick = () => {
-    setActiveJoke(joke);
-  };
-
+  // Sets className for active card
   const activeCard = joke === activeJoke ? 'active' : '';
+
+  // Sets className for smile/frown for liked/disliked cards
   const showLike = likeJoke === 'like' ? 'show' : '';
   const showFrown = likeJoke === 'dislike' ? 'show' : '';
 
   return (
-    <div className={`joke-card ${activeCard}`} onClick={() => onCardClick()}>
+    <div className={`joke-card ${activeCard}`} onClick={() => setActiveJoke(joke)}>
+      {/* Smile or frown on reverse of card */}
       <div className="card-reverse-liked">
         <img className={`hidden-smile-${showLike}`} alt="Jokester logo" src={smile} />
         <img className={`hidden-frown-${showFrown}`} alt="Jokester logo" src={frown} />
       </div>
+      {/* Card face */}
       <div className="card-content">
         <div className="card-text">
           <div className="joke-setup">{joke.setup}</div>
           <div className="joke-punchline">{joke.punchline}</div>
         </div>
         <div className="like-buttons">
-          <LikeButton value={"like"} image={smile} onLike={onLike} likeJoke={likeJoke} activeButton={activeButton}/>
-          <LikeButton value={"dislike"} image={frown} onLike={onLike} likeJoke={likeJoke} activeButton={activeButton}/>
+          <LikeButton value={"like"} image={smile} onLike={onLike} likeJoke={likeJoke}/>
+          <LikeButton value={"dislike"} image={frown} onLike={onLike} likeJoke={likeJoke}/>
         </div>
       </div>
     </div>
