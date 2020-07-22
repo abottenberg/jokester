@@ -5,11 +5,21 @@ import './styles/_app.scss';
 import logo from './images/JokesterSmile.svg';
 import {useSpring, animated} from 'react-spring';
 
+
+
 const App = () => {
   const [jokes, setJokes] = useState([]);
   // spring react state for laugh animation
   const [state, toggle] = useState(true);
   const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } });
+
+  const getData = async () => {
+    const res = await fetch("/db.json");
+    const data = await res.text();
+    console.log(data);
+  }
+
+  getData()
 
   useEffect(() => {
     const getJokes = async () => {
@@ -19,6 +29,7 @@ const App = () => {
     getJokes();
   }, []);
 
+  // spring react for laugh animation
   const logoLaugh = () => {
     toggle(!state)
   };

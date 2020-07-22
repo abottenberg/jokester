@@ -18,3 +18,7 @@
 .dislikedislike {
   background-color: $red;
 }
+
+:focus {
+  outline:0 !important;
+}
