@@ -4,11 +4,20 @@ import smile from '../images/JokesterSmile.svg';
 import frown from '../images/JokesterFrown.svg';
 import '../styles/_jokeCard.scss';
 
-const JokeCard = ({ joke, activeJoke, setActiveJoke }) => {
+const JokeCard = ({ joke, activeJoke, setActiveJoke, logoLaugh }) => {
   const [likeJoke, setLikeJoke] = useState(null);
+  const laughAudio = new Audio("/Laugh.mp3")
+  const sighAudio = new Audio("/Sigh.mp3")
 
   const onLike = (event) => {
     setLikeJoke(event.currentTarget.value);
+    if (event.currentTarget.value === 'like') {
+      logoLaugh();
+      laughAudio.play()
+    };
+    if (event.currentTarget.value === 'dislike') {
+      sighAudio.play()
+    }
   };
 
   // Sets className for active card

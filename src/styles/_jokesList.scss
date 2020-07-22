@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;
+    grid-template-rows: 240px 10fr;
   }
   .jokes-container {
     margin: auto 16px 16px;
@@ -17,6 +18,7 @@
     display: grid;
     grid-template-columns: 2fr;
     grid-gap: 16px;
+    grid-template-rows: 240px 5fr;
   }
   .jokes-container {
     margin: auto 24px 24px;
