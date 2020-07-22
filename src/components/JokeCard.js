@@ -9,12 +9,6 @@ const JokeCard = ({ joke, activeJoke, setActiveJoke, logoLaugh }) => {
   const laughAudio = new Audio("/Laugh.mp3")
   const sighAudio = new Audio("/Sigh.mp3")
 
-  const low = require('lowdb')
-  const FileSync = require('lowdb/adapters/FileSync')
-
-  const adapter = new FileSync('db.json')
-  const db = low(adapter)
-
   const onLike = (event) => {
     setLikeJoke(event.currentTarget.value);
     if (event.currentTarget.value === 'like') {
@@ -24,7 +18,6 @@ const JokeCard = ({ joke, activeJoke, setActiveJoke, logoLaugh }) => {
     if (event.currentTarget.value === 'dislike') {
       sighAudio.play()
     }
-    db.push({joke});
   };
 
   // Sets className for active card
