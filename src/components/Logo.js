@@ -4,8 +4,6 @@ import logo from '../images/JokesterSmile.svg';
 import frownLogo from '../images/JokesterFrown.svg';
 import {useSpring, useTransition, animated} from 'react-spring';
 
-
-
 const Logo = ({ logoLaugh, logoWobble, logoSigh, index }) => {
   // logo animation
   const { x } = useSpring({
