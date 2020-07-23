@@ -1,55 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JokesList from './components/JokesList';
+import Logo from './components/Logo';
 import './styles/_app.scss';
-import logo from './images/JokesterSmile.svg';
-import {useSpring, animated} from 'react-spring';
-
-
 
 const App = () => {
   const [jokes, setJokes] = useState([]);
+
   // spring react state for laugh animation
-  const [state, toggle] = useState(true);
-  const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } });
+  const [logoWobble, setLogoWobble] = useState(true);
+  const [index, setIndex] = useState(0)
 
-  const getData = async () => {
-    const res = await fetch("/db.json");
-    const data = await res.text();
-    console.log(data);
-  }
+  ///////////////////////////////
 
-  getData()
+  // *** Uncomment to use local db.file ***
+  // *** Also uncomment as instructed on components/JokeCard.js ***
+
+  // useEffect(() => {
+  //  const getData = async () => {
+  //    const results = await axios.get("http://localhost:3001/jokes");
+  //    setJokes(results.data);
+  //  };
+  //  getData();
+  // }, []);
+
+  ///////////////////////////////
+
+  // Use jokes api
 
   useEffect(() => {
     const getJokes = async () => {
-      const results = await axios.get('https://official-joke-api.appspot.com/random_ten');
+      const results = await axios.get(
+        'https://official-joke-api.appspot.com/random_ten'
+      );
       setJokes(results.data);
     };
     getJokes();
   }, []);
 
-  // spring react for laugh animation
+  ///////////////////////////////
+
+  // react-spring functions for laugh animation
   const logoLaugh = () => {
-    toggle(!state)
+    setLogoWobble(!logoWobble)
+    setIndex(0)
   };
+
+  const logoSigh =() => {
+    setLogoWobble(!logoWobble)
+    setIndex(1)
+  }
+
 
   return (
     <div >
-      <div className="logo">
-        <animated.div
-          style={{
-            transform: x
-              .interpolate({
-                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                output: [1, 0.95, 1.1, 0.95, 1.1, 0.95, 1.1, 1]
-              })
-              .interpolate(x => `scale(${x})`)
-          }}>
-            <img alt="Jokester logo" src={logo} style={{width: "172px"}}/>
-        </animated.div>
-      </div>
-      <JokesList jokes={jokes} logoLaugh={logoLaugh} />
+      <Logo logoLaugh={logoLaugh} logoWobble={logoWobble} logoSigh={logoSigh} index={index} />
+      <JokesList jokes={jokes} logoLaugh={logoLaugh} logoSigh={logoSigh} />
     </div>
   );
 

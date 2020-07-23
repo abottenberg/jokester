@@ -1,0 +1,74 @@
+{
+  "jokes": [
+    {
+      "id": 0,
+      "type": "my bonus joke!",
+      "setup": "A group of toadstools walk into a crowded bar...",
+      "punchline": "One says to the other, 'There ain't mushroom in here!'",
+      "like": "like"
+    },
+    {
+      "id": 323,
+      "type": "general",
+      "setup": "Why can’t you hear a pterodactyl go to the bathroom?",
+      "punchline": "The p is silent.",
+      "like": null
+    },
+    {
+      "id": 237,
+      "type": "general",
+      "setup": "What do you call two barracuda fish?",
+      "punchline": " A Pairacuda!",
+      "like": null
+    },
+    {
+      "id": 281,
+      "type": "general",
+      "setup": "What's orange and sounds like a parrot?",
+      "punchline": "A Carrot.",
+      "like": "dislike"
+    },
+    {
+      "id": 343,
+      "type": "general",
+      "setup": "Why did the man put his money in the freezer?",
+      "punchline": "He wanted cold hard cash!",
+      "like": null
+    },
+    {
+      "id": 28,
+      "type": "programming",
+      "setup": "To understand what recursion is...",
+      "punchline": "You must first understand what recursion is",
+      "like": null
+    },
+    {
+      "id": 270,
+      "type": "general",
+      "setup": "What kind of pants do ghosts wear?",
+      "punchline": "Boo jeans.",
+      "like": null
+    },
+    {
+      "id": 228,
+      "type": "general",
+      "setup": "What do you call a troublesome Canadian high schooler?",
+      "punchline": "A poutine.",
+      "like": null
+    },
+    {
+      "id": 6,
+      "type": "general",
+      "setup": "How does a train eat?",
+      "punchline": "It goes chew, chew",
+      "like": null
+    },
+    {
+      "id": 98,
+      "type": "general",
+      "setup": "Did you hear that David lost his ID in prague?",
+      "punchline": "Now we just have to call him Dav.",
+      "like": null
+    }
+  ]
+}
